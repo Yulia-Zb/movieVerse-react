@@ -1,0 +1,10 @@
+import GenreList from "../components/GenreList";
+
+export default function GenresPage() {
+  return (
+    <div className="wrapper">
+      <h1 className="wrapper__title">Жанры</h1>
+      <GenreList />
+    </div>
+  );
+}
