@@ -1,4 +1,4 @@
-import PopularList from "../components/PopularList";
+import PopularList from "../components/movies/PopularList";
 
 export default function TopMoviesPage() {
   return (

@@ -1,34 +1,10 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import Loader from "../components/Loader";
-import { ACCESS_TOKEN } from "../services/auth";
+import Loader from "../components/shared/Loader";
+import { useMovieById } from "../hooks/useMovieById";
 
 export default function SingleMoviePage() {
-  const [movieDetails, setMovieDetails] = useState({});
-  const [isLoading, setIsLoading] = useState(false);
   const { id } = useParams();
-
-  useEffect(() => {
-    async function fetchMovieById() {
-      try {
-        setIsLoading(true);
-        const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?language=ru-RU`, {
-          method: "GET",
-          headers: {
-            accept: "application/json",
-            Authorization: `Bearer ${ACCESS_TOKEN}`,
-          },
-        });
-        const data = await response.json();
-        setMovieDetails(data);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setIsLoading(false);
-      }
-    }
-    fetchMovieById();
-  }, [id]);
+  const { movieDetails, isLoading } = useMovieById(id);
 
   if (isLoading) {
     return (

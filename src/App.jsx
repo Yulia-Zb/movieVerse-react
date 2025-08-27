@@ -1,8 +1,7 @@
-import { useLocation } from "react-router";
 import { useEffect } from "react";
-import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
-import AppRouter from "./components/AppRouter";
+import { useLocation } from "react-router";
+import Layout from "./components/core/Layout";
+import AppRouter from "./components/core/AppRouter";
 import "./assets/css/style.css";
 
 function App() {
@@ -13,13 +12,9 @@ function App() {
   }, [location.pathname]);
 
   return (
-    <>
-      <Header />
-      <div className="container">
-        <Sidebar />
-        <AppRouter />
-      </div>
-    </>
+    <Layout>
+      <AppRouter />
+    </Layout>
   );
 }
 

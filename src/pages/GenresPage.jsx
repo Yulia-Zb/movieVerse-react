@@ -1,4 +1,4 @@
-import GenreList from "../components/GenreList";
+import GenreList from "../components/genres/GenreList";
 
 export default function GenresPage() {
   return (

@@ -1,0 +1,120 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 32px auto 0;
+  background-color: var(--bg-color);
+  border-radius: 5px;
+  padding: 0 16px;
+}
+
+.wrapper {
+  flex: 1;
+  height: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper__title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 30px 10px;
+  color: var(--accent-dark);
+  margin-bottom: 45px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.grid__item {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.grid__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.grid__item-content {
+  flex-grow: 1;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.grid__item img {
+  display: block;
+  border-radius: 12px;
+  margin: 0 auto;
+  aspect-ratio: 2 / 3;
+  width: 200px;
+  object-fit: cover;
+}
+
+.genres-grid {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.nf-container {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nf-title {
+  font-size: 20px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.nf-title a {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.dark {
+  --accent-dark: #f4f1de;
+  --bg-color: #1e1e1e;
+  --card-bg: #2a2a2a;
+  --search-border: #444;
+  --sidebar-footer: #666;
+  --text-color: #e6e6e6;
+  --card-color: #a5a4a4;
+  color: var(--text-color);
+}
+
+.dark .movie-details__info p span {
+  color: var(--card-color);
+}
+
+.dark .search__input {
+  color: var(--text-color);
+}

@@ -1,0 +1,40 @@
+.theme {
+  margin-top: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+}
+
+.theme__text {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.toggle {
+  position: relative;
+  width: 85px;
+  height: 40px;
+  border: 1px solid var(--sidebar-footer);
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.toggle__active > .toggle__round {
+  left: 46px;
+  background: var(--accent-color);
+}
+
+.toggle__round {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 100%;
+  background: var(--sidebar-footer);
+  transition: 0.3s ease;
+}

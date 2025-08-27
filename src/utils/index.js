@@ -1,0 +1,8 @@
+export {  TOP_MOVIES_PAGE_ROUTE,
+  GENRES_PAGE_ROUTE,
+  SETTINGS_PAGE_ROUTE,
+  SINGLE_MOVIE_PAGE_ROUTE,
+  GENRE_MOVIES_PAGE_ROUTE,
+  SEARCH_PAGE_ROUTE, NOT_FOUND_PAGE } from "./consts"
+
+  export {routes} from "./routes"

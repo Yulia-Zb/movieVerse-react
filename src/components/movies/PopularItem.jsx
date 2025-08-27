@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { SINGLE_MOVIE_PAGE_ROUTE } from "../utils/consts";
+import { SINGLE_MOVIE_PAGE_ROUTE } from "../../utils";
 
 export default function PopularItem({ movie }) {
   const rating = movie.vote_average.toFixed(1);

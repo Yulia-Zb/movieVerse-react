@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { GENRE_MOVIES_PAGE_ROUTE } from "../utils/consts";
+import { GENRE_MOVIES_PAGE_ROUTE } from "../../utils";
 import { PiFilmSlate } from "react-icons/pi";
 
 export default function GenreItem({ title, id }) {
